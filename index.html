@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter - Desain Landing Page</title>
+    <meta name="description" content="Chapter - Powering Trust Behind Every Operation. Platform manajemen operasional yang membantu tim Anda bekerja lebih efisien dengan ticketing support, operational excellence, dan scheduler.">
+    <meta name="keywords" content="operational management, ticketing system, scheduler, operational excellence, team management">
+    <meta name="author" content="Chapter">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Chapter - Powering Trust Behind Every Operation">
+    <meta property="og:description" content="Platform manajemen operasional yang membantu tim Anda bekerja lebih efisien">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/667eea/ffffff?text=Chapter">
+    
+    <title>Chapter - Powering Trust Behind Every Operation</title>
+    
     <style>
         * {
             margin: 0;
@@ -113,20 +124,22 @@
             color: white;
             margin-bottom: 20px;
             letter-spacing: -1px;
+            line-height: 1.2;
         }
 
         h1 .highlight {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: block;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f0ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            filter: brightness(2);
+            font-weight: 800;
         }
 
         .subtitle {
             font-size: 1.2rem;
             color: rgba(255, 255, 255, 0.9);
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
             line-height: 1.8;
             animation: fadeInUp 1s ease-out 0.4s both;
@@ -181,14 +194,34 @@
             transform: translateY(-3px);
         }
 
+        /* Trust Badge */
+        .trust-badge {
+            margin-top: 30px;
+            animation: fadeInUp 1s ease-out 0.7s both;
+        }
+
+        .trust-text {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .trust-icon {
+            width: 20px;
+            height: 20px;
+        }
+
         /* Features Section */
         .features {
             margin-top: 100px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             width: 100%;
-            max-width: 1000px;
+            max-width: 1100px;
             animation: fadeInUp 1s ease-out 0.8s both;
         }
 
@@ -199,6 +232,7 @@
             border-radius: 20px;
             padding: 40px 30px;
             transition: all 0.3s ease;
+            text-align: left;
         }
 
         .feature-card:hover {
@@ -215,11 +249,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
+            margin-bottom: 20px;
         }
 
         .feature-title {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: white;
             margin-bottom: 15px;
             font-weight: 600;
@@ -228,7 +262,29 @@
         .feature-description {
             color: rgba(255, 255, 255, 0.8);
             line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .feature-list {
+            margin-top: 15px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            color: rgba(255, 255, 255, 0.7);
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
             font-size: 0.95rem;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ffffff;
+            font-weight: bold;
         }
 
         /* Animations */
@@ -277,6 +333,14 @@
             .features {
                 grid-template-columns: 1fr;
             }
+
+            .feature-card {
+                text-align: center;
+            }
+
+            .feature-icon {
+                margin: 0 auto 20px;
+            }
         }
     </style>
 </head>
@@ -304,64 +368,113 @@
 
         <!-- Heading -->
         <div class="heading">
-            <h1>Mulai <span class="highlight">Chapter</span> Baru Anda</h1>
+            <h1>
+                <span class="highlight">Powering Trust</span>
+                Behind Every Operation
+            </h1>
         </div>
 
         <p class="subtitle">
-            Platform inovatif yang membantu Anda menulis, berbagi, dan mengembangkan cerita dengan komunitas penulis kreatif di seluruh dunia.
+            Platform manajemen operasional yang memberdayakan tim Anda untuk bekerja lebih efisien, responsif, dan terstruktur. Dari ticketing hingga scheduling, semua dalam satu ekosistem yang terpercaya.
         </p>
 
         <!-- CTA Buttons -->
         <div class="cta-buttons">
-            <a href="#" class="btn btn-primary">
-                Mulai Sekarang
+            <a href="#signup" class="btn btn-primary">
+                Daftar Sekarang
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
             </a>
-            <a href="#" class="btn btn-secondary">
-                Pelajari Lebih Lanjut
+            <a href="#features" class="btn btn-secondary">
+                Lihat Fitur
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
                 </svg>
             </a>
         </div>
 
+        <!-- Trust Badge -->
+        <div class="trust-badge">
+            <p class="trust-text">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.7)" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                Terpercaya oleh tim operasional profesional
+            </p>
+        </div>
+
         <!-- Features -->
-        <div class="features">
+        <div class="features" id="features">
             <div class="feature-card">
                 <div class="feature-icon">
                     <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#667eea" stroke-width="2">
-                        <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <line x1="3" y1="9" x2="21" y2="9"/>
+                        <line x1="9" y1="21" x2="9" y2="9"/>
                     </svg>
                 </div>
-                <h3 class="feature-title">Tulis dengan Bebas</h3>
-                <p class="feature-description">Editor yang powerful dan intuitif untuk mengekspresikan kreativitas tanpa batas</p>
+                <h3 class="feature-title">Ticketing Support</h3>
+                <p class="feature-description">Kelola permintaan dan masalah dengan sistem tiket yang terorganisir dan responsif.</p>
+                <ul class="feature-list">
+                    <li>Tracking real-time status tiket</li>
+                    <li>Prioritas otomatis berdasarkan urgency</li>
+                    <li>Kolaborasi tim yang seamless</li>
+                    <li>SLA monitoring & reporting</li>
+                </ul>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">
                     <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#764ba2" stroke-width="2">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                        <circle cx="9" cy="7" r="4"/>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
                     </svg>
                 </div>
-                <h3 class="feature-title">Komunitas Aktif</h3>
-                <p class="feature-description">Bergabung dengan ribuan penulis dan dapatkan feedback untuk karya Anda</p>
+                <h3 class="feature-title">Operational Excellence</h3>
+                <p class="feature-description">Optimalkan proses operasional dengan standar kualitas yang konsisten dan terukur.</p>
+                <ul class="feature-list">
+                    <li>Dashboard analytics komprehensif</li>
+                    <li>Performance metrics yang jelas</li>
+                    <li>Quality control & compliance</li>
+                    <li>Continuous improvement tools</li>
+                </ul>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">
                     <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#667eea" stroke-width="2">
-                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                        <line x1="16" y1="2" x2="16" y2="6"/>
+                        <line x1="8" y1="2" x2="8" y2="6"/>
+                        <line x1="3" y1="10" x2="21" y2="10"/>
                     </svg>
                 </div>
-                <h3 class="feature-title">Analytics Real-time</h3>
-                <p class="feature-description">Pantau performa tulisan dan interaksi pembaca secara langsung</p>
+                <h3 class="feature-title">Smart Scheduler</h3>
+                <p class="feature-description">Atur jadwal tim dan resource dengan intelligent scheduling yang adaptif.</p>
+                <ul class="feature-list">
+                    <li>Automated scheduling & reminders</li>
+                    <li>Resource allocation optimizer</li>
+                    <li>Conflict detection & resolution</li>
+                    <li>Calendar integration</li>
+                </ul>
             </div>
         </div>
     </div>
+
+    <script>
+        // Smooth scroll untuk anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
