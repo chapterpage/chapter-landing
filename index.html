@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chapter - Powering Trust Behind Every Operation. Platform manajemen operasional yang membantu tim Anda bekerja lebih efisien dengan ticketing support, operational excellence, dan scheduler.">
-    <meta name="keywords" content="operational management, ticketing system, scheduler, operational excellence, team management">
+    <meta name="description" content="Chapter - Platform All-in-One untuk Operasional Tim yang Lebih Baik. Daftar sekarang untuk mendapat akses awal ke sistem tiket, daily checklist, dan penjadwalan cerdas.">
+    <meta name="keywords" content="manajemen operasional, sistem tiket, penjadwalan, daily checklist, manajemen tim, early access">
     <meta name="author" content="Chapter">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Chapter - Powering Trust Behind Every Operation">
-    <meta property="og:description" content="Platform manajemen operasional yang membantu tim Anda bekerja lebih efisien">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/667eea/ffffff?text=Chapter">
+    <meta property="og:title" content="Chapter - Early Access | Platform All-in-One untuk Operasional Tim">
+    <meta property="og:description" content="Daftar untuk Early Access - Platform yang membuat operasional tim Anda lebih terorganisir dan efisien">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/667eea/ffffff?text=Chapter+Early+Access">
     
-    <title>Chapter - Powering Trust Behind Every Operation</title>
+    <title>Chapter - Early Access | Platform All-in-One untuk Operasional Tim</title>
     
     <style>
         * {
@@ -88,10 +88,33 @@
             text-align: center;
         }
 
+        /* Early Access Badge */
+        .early-access-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            animation: fadeInDown 1s ease-out;
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .early-access-badge::before {
+            content: "✨";
+            font-size: 1.1rem;
+        }
+
         /* Logo/Icon Section */
         .icon-wrapper {
             margin-bottom: 40px;
-            animation: fadeInDown 1s ease-out;
+            animation: fadeInDown 1s ease-out 0.1s both;
         }
 
         .icon {
@@ -142,7 +165,7 @@
         /* Heading Section */
         .heading {
             margin-bottom: 30px;
-            animation: fadeInUp 1s ease-out 0.2s both;
+            animation: fadeInUp 1s ease-out 0.3s both;
         }
 
         h1 {
@@ -169,7 +192,42 @@
             max-width: 700px;
             margin: 0 auto;
             line-height: 1.8;
-            animation: fadeInUp 1s ease-out 0.4s both;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        /* Launch Status */
+        .launch-status {
+            margin-top: 35px;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .status-text {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .status-text strong {
+            color: #fbbf24;
+            font-weight: 700;
+        }
+
+        .waitlist-count {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 50px;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .waitlist-count svg {
+            width: 18px;
+            height: 18px;
         }
 
         /* CTA Buttons */
@@ -179,7 +237,7 @@
             gap: 20px;
             flex-wrap: wrap;
             justify-content: center;
-            animation: fadeInUp 1s ease-out 0.6s both;
+            animation: fadeInUp 1s ease-out 0.7s both;
         }
 
         .btn {
@@ -194,6 +252,8 @@
             gap: 10px;
             border: 2px solid transparent;
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
 
         .btn-primary {
@@ -202,10 +262,38 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: #f8f9ff;
+            transition: width 0.6s, height 0.6s, top 0.6s, left 0.6s;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        .btn-primary:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-            background: #f8f9ff;
+        }
+
+        .btn-primary span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-primary svg {
+            position: relative;
+            z-index: 1;
         }
 
         .btn-secondary {
@@ -224,7 +312,7 @@
         /* Trust Badge */
         .trust-badge {
             margin-top: 30px;
-            animation: fadeInUp 1s ease-out 0.7s both;
+            animation: fadeInUp 1s ease-out 0.8s both;
         }
 
         .trust-text {
@@ -249,7 +337,7 @@
             gap: 30px;
             width: 100%;
             max-width: 1100px;
-            animation: fadeInUp 1s ease-out 0.8s both;
+            animation: fadeInUp 1s ease-out 0.9s both;
         }
 
         .feature-card {
@@ -382,6 +470,20 @@
             stroke: white;
         }
 
+        .modal-badge {
+            display: inline-block;
+            background: rgba(251, 191, 36, 0.2);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            color: #fbbf24;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
         .modal-title {
             color: white;
             font-size: 1.8rem;
@@ -479,6 +581,16 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
+            animation: scaleIn 0.5s ease;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
         }
 
         .success-icon svg {
@@ -498,7 +610,22 @@
         .success-text {
             color: #666;
             line-height: 1.6;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+        }
+
+        .success-highlight {
+            background: #fef3c7;
+            border-left: 4px solid #fbbf24;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .success-highlight strong {
+            color: #f59e0b;
+            display: block;
+            margin-bottom: 5px;
         }
 
         .success-button {
@@ -617,6 +744,11 @@
     </div>
 
     <div class="container">
+        <!-- Early Access Badge -->
+        <div class="early-access-badge">
+            Early Access
+        </div>
+
         <!-- Logo/Icon -->
         <div class="icon-wrapper">
             <div class="icon">
@@ -631,19 +763,35 @@
         <!-- Heading -->
         <div class="heading">
             <h1>
-                <span class="highlight">Powering Trust</span>
-                Behind Every Operation
+                Platform All-in-One untuk<br>
+                <span class="highlight">Operasional Tim yang Lebih Baik</span>
             </h1>
         </div>
 
         <p class="subtitle">
-            Platform manajemen operasional yang memberdayakan tim Anda untuk bekerja lebih efisien, responsif, dan terstruktur. Dari ticketing hingga scheduling, semua dalam satu ekosistem yang terpercaya.
+            Kelola semua kebutuhan operasional tim Anda dalam satu platform yang mudah digunakan. Dari sistem tiket, checklist harian, hingga penjadwalan - semua terorganisir dengan baik dan efisien.
         </p>
+
+        <!-- Launch Status -->
+        <div class="launch-status">
+            <p class="status-text">
+                🚀 <strong>Segera Hadir</strong> - Target peluncuran MVP dalam 1 bulan
+            </p>
+            <div class="waitlist-count">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                <span>Jadilah yang pertama mendapat akses</span>
+            </div>
+        </div>
 
         <!-- CTA Buttons -->
         <div class="cta-buttons">
             <a href="#" class="btn btn-primary" id="openModalBtn">
-                Daftar Sekarang
+                <span>Daftar Sekarang</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
@@ -660,9 +808,10 @@
         <div class="trust-badge">
             <p class="trust-text">
                 <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.7)" stroke-width="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="M9 11l3 3L22 4"/>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
                 </svg>
-                Terpercaya oleh tim operasional profesional
+                Solusi operasional yang praktis dan efisien
             </p>
         </div>
 
@@ -679,26 +828,27 @@
                 <h3 class="feature-title">Ticketing Support</h3>
                 <p class="feature-description">Kelola permintaan dan masalah dengan sistem tiket yang terorganisir dan responsif.</p>
                 <ul class="feature-list">
-                    <li>Tracking real-time status tiket</li>
-                    <li>Prioritas otomatis berdasarkan urgency</li>
-                    <li>Kolaborasi tim yang seamless</li>
-                    <li>SLA monitoring & reporting</li>
+                    <li>Pelacakan status tiket secara real-time</li>
+                    <li>Prioritas otomatis berdasarkan tingkat urgensi</li>
+                    <li>Kolaborasi tim yang lancar dan mudah</li>
+                    <li>Monitoring dan pelaporan SLA</li>
                 </ul>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">
                     <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#764ba2" stroke-width="2">
-                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        <path d="M9 11l3 3L22 4"/>
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
                     </svg>
                 </div>
-                <h3 class="feature-title">Operational Excellence</h3>
-                <p class="feature-description">Optimalkan proses operasional dengan standar kualitas yang konsisten dan terukur.</p>
+                <h3 class="feature-title">Daily Checklist</h3>
+                <p class="feature-description">Pastikan semua tugas operasional terselesaikan dengan checklist harian yang terstruktur.</p>
                 <ul class="feature-list">
-                    <li>Dashboard analytics komprehensif</li>
-                    <li>Performance metrics yang jelas</li>
-                    <li>Quality control & compliance</li>
-                    <li>Continuous improvement tools</li>
+                    <li>Dashboard untuk memantau progres tim</li>
+                    <li>Metrik kinerja yang jelas dan terukur</li>
+                    <li>Sesuaikan checklist dengan SOP Anda</li>
+                    <li>Tools untuk perbaikan berkelanjutan</li>
                 </ul>
             </div>
 
@@ -712,12 +862,12 @@
                     </svg>
                 </div>
                 <h3 class="feature-title">Smart Scheduler</h3>
-                <p class="feature-description">Atur jadwal tim dan resource dengan intelligent scheduling yang adaptif.</p>
+                <p class="feature-description">Atur jadwal tim dan sumber daya dengan sistem penjadwalan yang cerdas dan adaptif.</p>
                 <ul class="feature-list">
-                    <li>Automated scheduling & reminders</li>
-                    <li>Resource allocation optimizer</li>
-                    <li>Conflict detection & resolution</li>
-                    <li>Calendar integration</li>
+                    <li>Penjadwalan otomatis dan pengingat</li>
+                    <li>Optimasi alokasi sumber daya</li>
+                    <li>Deteksi dan penyelesaian konflik jadwal</li>
+                    <li>Integrasi dengan kalender</li>
                 </ul>
             </div>
         </div>
@@ -732,8 +882,9 @@
                         <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
                 </button>
+                <span class="modal-badge">✨ Slot Terbatas</span>
                 <h2 class="modal-title">Daftar Sekarang</h2>
-                <p class="modal-subtitle">Bergabunglah dengan Chapter dan tingkatkan efisiensi operasional tim Anda</p>
+                <p class="modal-subtitle">Jadilah yang pertama menggunakan Chapter saat kami meluncur!</p>
             </div>
             
             <div class="modal-body">
@@ -777,7 +928,7 @@
                     </div>
 
                     <button type="submit" class="form-submit" id="submitBtn">
-                        Daftar Sekarang
+                        🚀 Daftar Sekarang
                     </button>
                 </form>
 
@@ -788,10 +939,18 @@
                             <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3 class="success-title">Pendaftaran Berhasil!</h3>
+                    <h3 class="success-title">🎉 Anda Terdaftar!</h3>
                     <p class="success-text">
-                        Terima kasih telah mendaftar. Tim kami akan segera menghubungi Anda dalam 1x24 jam.
+                        Selamat! Anda sekarang ada di daftar prioritas kami.
                     </p>
+                    <div class="success-highlight">
+                        <strong>Apa Selanjutnya?</strong>
+                        <p style="color: #666; margin: 0; font-size: 0.9rem;">
+                            ✓ Kami akan mengirim email saat MVP siap diluncurkan<br>
+                            ✓ Pengguna awal mendapat perpanjangan masa uji coba gratis<br>
+                            ✓ Tim kami mungkin akan menghubungi untuk mengumpulkan masukan
+                        </p>
+                    </div>
                     <button class="success-button" id="closeSuccessBtn">Tutup</button>
                 </div>
             </div>
@@ -850,7 +1009,7 @@
             
             // Disable submit button
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Mengirim...';
+            submitBtn.textContent = '⏳ Mendaftar...';
 
             // Get form data
             const formData = new FormData(registrationForm);
@@ -894,7 +1053,7 @@
             } finally {
                 // Re-enable submit button
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Daftar Sekarang';
+                submitBtn.textContent = '🚀 Daftar Sekarang';
             }
         });
 
