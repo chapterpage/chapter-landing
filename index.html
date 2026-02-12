@@ -764,6 +764,18 @@
                         <input type="text" name="lokasi" class="form-input" placeholder="Contoh: Jakarta, Indonesia" required>
                     </div>
 
+                    <div class="form-group">
+                        <label class="form-label">Ukuran Tim <span class="required">*</span></label>
+                        <select name="ukuranTim" class="form-input" required>
+                            <option value="">Pilih ukuran tim...</option>
+                            <option value="1-10">1-10 orang</option>
+                            <option value="11-50">11-50 orang</option>
+                            <option value="51-100">51-100 orang</option>
+                            <option value="101-500">101-500 orang</option>
+                            <option value="500+">Lebih dari 500 orang</option>
+                        </select>
+                    </div>
+
                     <button type="submit" class="form-submit" id="submitBtn">
                         Daftar Sekarang
                     </button>
@@ -848,6 +860,7 @@
                 email: formData.get('email'),
                 phone: formData.get('phone'),
                 lokasi: formData.get('lokasi'),
+                ukuranTim: formData.get('ukuranTim'),
                 timestamp: new Date().toLocaleString('id-ID', { 
                     timeZone: 'Asia/Jakarta',
                     year: 'numeric',
